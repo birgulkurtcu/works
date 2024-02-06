@@ -1,0 +1,150 @@
+import java.util.Random;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+        /* 1- Switch case ile müşteriden alınan sipariş numarasına göre
+        hangi ürünün sipariş edildiğini belirleyen algoritma yazınız.
+        Input için Scanner kullanınız */
+
+        /*Scanner scanner = new Scanner(System.in);
+        System.out.println( "sipariş numarasını giriniz:");
+        int siparisNo = scanner.nextInt();
+        switch (siparisNo){
+            case 1 -> System.out.println("ürün 1'i seçtiniz");
+            case 2 -> System.out.println("ürün 2'yi seçtiniz");
+            case 3 -> System.out.println("ürün 3'yi seçtiniz");
+            default -> System.out.println("satışı olmayan bir ürünü seçtiniz");
+        }*/
+
+
+        /* 2- kullanıcıdan kaç ürün almak istediğini soran,
+        her ürünün fiyatını alarak toplam alışveriş tutarını hesaplayan bir algoritma yazınız.
+        (Input için Scanner ve döngü için for döngüsü kullanınız) */
+
+        /*Scanner scanner = new Scanner(System.in);
+        System.out.println("Kaç ürün almak istersiniz ?");
+        int orderQuality = scanner.nextInt();
+
+        int orderTotal = 0;
+
+        for(int i = 0; i < orderQuality; i++){
+            System.out.println(" Ürünün fiyatını giriniz:" + i);
+            int productPrice = scanner.nextInt();
+            orderTotal += productPrice;
+        }
+
+        System.out.println( " Toplam tutarınız :" + orderTotal); */
+
+        /* 3- Do-While ve While döngüsü nedir? Bununla ilgili örnek yapınız.*/
+        /* verilen sayının do kısmını bir kez çalıştırır sonrasında koşullu while döngüsünde dönmeye devam eder.*/
+
+       /*int  i = 5;
+        do {
+            System.out.println( i + " ");
+            i++;
+        }
+        while( i < 10); {
+            System.out.println( i + " " );
+        }*/
+
+
+        /* 4-Kullanıcının 1 ile 10 arasında rastgele bir sayıyı tahmin etmesini isteyen ve
+        doğru tahmin edene kadar devam eden bir program yazınız.
+        (While döngüsü ile yapınız ve rastgele sayı üretmek için Random sınıfını kullanınız) */
+
+        /*Random random = new Random();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Kaç ürün almak istersiniz ?");
+        int guessNumber = random.nextInt(10);
+        int userNumber = 0;
+        int attempts = 10;
+        int i = 0;
+
+        while (i < attempts) {
+            System.out.println( " Sayıyı tahmin ediniz :");
+                userNumber = scanner.nextInt();
+            i++;
+            if (guessNumber == userNumber) {
+                System.out.println( " Tahmininiz doğru sayınız :" + userNumber);
+                break;
+            }
+            else
+                System.out.println( " tahmin hakkınız :" + (attempts - i) );
+        } */
+
+
+        /* 5- Bir sayının mükemmel sayı olup olmadığı kontrol eden algoritma yazınız.*/
+
+        /*Scanner input = new Scanner(System.in);
+        System.out.print("Bir sayı giriniz: ");
+        int number = input.nextInt();
+
+        int total = 0;
+        for (int i = 1; i < number; i++) {
+            if (number % i == 0) {
+                total += i;
+            }
+        }
+        if (total == number) {
+            System.out.println(number + " sayı mükemmel bir sayıdır.");
+        } else {
+            System.out.println(number + " sayı mükemmel bir sayı değildir.");
+        } */
+
+
+
+        /* 6- String metotlarını araştırınız. Her bir metot için örnek yapınız.*/
+
+        /*String str = "Merhaba";
+        String kucuk = str.toLowerCase(); // kucuk "merhaba" yazılır
+
+        String str = "Merhaba";
+        String altDize = str.substring(3); // altDize "haba" yazılır
+
+        String str = "Merhaba";
+        String buyuk = str.toUpperCase(); // buyuk "MERHABA" yazılır
+
+        String str = "Merhaba";
+        int indeks = str.indexOf('a'); // indeks 3 yazılır
+
+        String str = "   Merhaba    ";
+        String trimliStr = str.trim(); // trimliStr "Merhaba" olarak yazılır
+         */
+
+
+        /*7- kullanıcıdan öğrenci sayısını isteyen her öğrenci için öğrenci adı,öğrenci soyadı,1.sınav notu,
+        2.sınav notu,3.sınav notu isteyen ve daha sonra not ortalamasını hesaplayıp ekrana yazdıran
+        algoritma yapınız.(For döngüsü kullanınız) */
+
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Kaç öğrenci bilgisi gireceksiniz? ");
+        int ogrenciSayisi = input.nextInt();
+
+        for (int i = 1; i <= ogrenciSayisi; i++) {
+            System.out.println("Öğrenci " + i + " bilgilerini girin:");
+
+        System.out.print("Öğrenci adı: ");
+        String ad = input.next();
+
+        System.out.print("Öğrenci soyadı: ");
+        String soyad = input.next();
+
+        System.out.print("1. sınav notu: ");
+        int not1 = input.nextInt();
+
+        System.out.print("2. sınav notu: ");
+        int not2 = input.nextInt();
+
+        System.out.print("3. sınav notu: ");
+        int not3 = input.nextInt();
+
+        double ortalama = (not1 + not2 + not3) / 3.0;
+        System.out.println("Öğrenci " + ad + " " + soyad + " not ortalaması: " + ortalama);
+    }
+
+    }
+
+}
